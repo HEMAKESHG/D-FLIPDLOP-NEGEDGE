@@ -49,8 +49,22 @@ Developed by: Hemakesh G
 RegisterNumber: 212223040064
 */
 ```
+```
+module e8(d, clk, rst, q);
+  input d, clk, rst;
+  output reg q;
+
+  always @(negedge clk or posedge rst) begin
+    if (rst)
+      q <= 0; 
+    else
+      q <= d; 
+  end
+endmodule
+```
 **RTL LOGIC FOR FLIPFLOPS**
 
+![Screenshot 2024-11-06 113100](https://github.com/user-attachments/assets/9e604a65-ed25-45e8-881b-b6f7c4aeb0ab)
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
